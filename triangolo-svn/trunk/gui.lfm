@@ -8,6 +8,8 @@ object TriangoloMainForm: TTriangoloMainForm
   ClientWidth = 512
   Constraints.MinHeight = 342
   Constraints.MinWidth = 512
+  Menu = MainMenu1
+  OnCreate = FormCreate
   LCLVersion = '2.0.0.1'
   object ParameterGroupBox: TGroupBox
     Left = 8
@@ -203,5 +205,127 @@ object TriangoloMainForm: TTriangoloMainForm
     Top = 327
     Width = 512
     Panels = <>
+  end
+  object MainMenu1: TMainMenu
+    left = 448
+    top = 88
+    object AppleMenu: TMenuItem
+      Caption = ''
+      object MacAboutItem: TMenuItem
+        Caption = 'Über Triangolo'
+        OnClick = MacAboutItemClick
+      end
+    end
+    object FileMenu: TMenuItem
+      Caption = 'Ablage'
+      object NewMenuItem: TMenuItem
+        Caption = 'Neu'
+        Enabled = False
+        ShortCut = 16462
+      end
+      object Divider11: TMenuItem
+        Caption = '-'
+      end
+      object OpenMenuItem: TMenuItem
+        Caption = 'Öffnen'
+        Enabled = False
+        ShortCut = 16463
+      end
+      object SaveMenuItem: TMenuItem
+        Caption = 'Sichern'
+        Enabled = False
+        ShortCut = 16467
+      end
+      object CloseMenuItem: TMenuItem
+        Caption = 'Schließen'
+        ShortCut = 16471
+        OnClick = CloseMenuItemClick
+      end
+      object Divider12: TMenuItem
+        Caption = '-'
+      end
+      object QuitMenuItem: TMenuItem
+        Caption = 'Beenden'
+        ShortCut = 16465
+        OnClick = QuitMenuItemClick
+      end
+    end
+    object EditMenu: TMenuItem
+      Caption = 'Bearbeiten'
+      object UndoMenuItem: TMenuItem
+        Action = EditUndo1
+        Caption = 'Widerrufen'
+      end
+      object RedoMenuItem: TMenuItem
+        Caption = 'Wiederholen'
+        Enabled = False
+        ShortCut = 24666
+      end
+      object Divider21: TMenuItem
+        Caption = '-'
+      end
+      object CutMenuItem: TMenuItem
+        Action = EditCut1
+      end
+      object CopyMenuItem: TMenuItem
+        Action = EditCopy1
+      end
+      object PasteMenuItem: TMenuItem
+        Action = EditPaste1
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = 'Hilfe'
+      object WinAboutItem: TMenuItem
+        Caption = 'Über Triangolo'
+        OnClick = WinAboutItemClick
+      end
+    end
+  end
+  object ActionList1: TActionList
+    left = 376
+    top = 88
+    object EditCut1: TEditCut
+      Category = 'Edit'
+      Caption = '&Ausschneiden'
+      Hint = 'Ausschneiden'
+      OnExecute = EditCut1Execute
+      ShortCut = 16472
+    end
+    object EditCopy1: TEditCopy
+      Category = 'Edit'
+      Caption = '&Kopieren'
+      Hint = 'Kopieren'
+      OnExecute = EditCopy1Execute
+      ShortCut = 16451
+    end
+    object EditPaste1: TEditPaste
+      Category = 'Edit'
+      Caption = '&Einfügen'
+      Hint = 'Einfügen'
+      OnExecute = EditPaste1Execute
+      ShortCut = 16470
+    end
+    object EditSelectAll1: TEditSelectAll
+      Category = 'Edit'
+      Caption = '&Alles markieren'
+      Hint = 'Alles markieren'
+      OnExecute = EditSelectAll1Execute
+      ShortCut = 16449
+    end
+    object EditUndo1: TEditUndo
+      Category = 'Edit'
+      Caption = '&Zurücknehmen'
+      Hint = 'Zurücknehmen'
+      OnExecute = EditUndo1Execute
+      ShortCut = 16474
+    end
+    object EditDelete1: TEditDelete
+      Category = 'Edit'
+      Caption = '&Löschen'
+      Hint = 'Löschen'
+      OnExecute = EditDelete1Execute
+      ShortCut = 46
+    end
   end
 end
