@@ -7,12 +7,31 @@
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="109" Y="5"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
+        <Filename Value="calculator.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Calculator"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="gui.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TriangoloMainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="GUI"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="main.pas"/>
         <ComponentName Value="TriangoloMainForm"/>
         <HasResources Value="True"/>
@@ -21,29 +40,6 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="9"/>
         <UsageCount Value="21"/>
-      </Unit1>
-      <Unit2>
-        <Filename Value="calculator.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Calculator"/>
-        <CursorPos X="31" Y="27"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="gui.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="TriangoloMainForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="GUI"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="33"/>
-        <CursorPos X="58" Y="64"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
     </Units>
     <JumpHistory Count="8" HistoryIndex="7">

@@ -1,3 +1,23 @@
+{ Triangolo }
+
+{ Version 1.0 (Agavi) }
+
+{ (c) Johannes W. Dietrich, 2012 - 2018 }
+{ (c) Ruhr University of Bochum 2012 - 2018 }
+
+{ Main project file }
+
+{ Source code released under the BSD License }
+
+{ See the file "license.txt", included in this distribution, }
+{ for details about the copyright. }
+{ Current versions and additional information are available from }
+{ http://puma-repository.sf.net }
+
+{ This program is distributed in the hope that it will be useful, }
+{ but WITHOUT ANY WARRANTY; without even the implied warranty of }
+{ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
+
 program project1;
 
 {$mode objfpc}{$H+}

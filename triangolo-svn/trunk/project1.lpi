@@ -18,10 +18,10 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="9"/>
+      <BuildNr Value="12"/>
       <Language Value="0809"/>
       <Attributes pvaDebug="True" pvaPreRelease="True"/>
-      <StringTable InternalName="Agavi" ProductName="Triangolo"/>
+      <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="J. W. Dietrich and Ruhr University of Bochum" ProductName="Triangolo" ProductVersion="1.0.0"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>

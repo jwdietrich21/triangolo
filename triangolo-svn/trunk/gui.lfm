@@ -61,15 +61,15 @@ object TriangoloMainForm: TTriangoloMainForm
       ItemHeight = 0
       ItemIndex = 0
       Items.Strings = (
-        'Methode A'
-        'Methode B1'
-        'Methode B2'
-        'Methode C'
+        'ETA-Methode A'
+        'ETA-Methode B1'
+        'ETA-Methode B2'
+        'ETA-Methode C'
       )
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
-      Text = 'Methode A'
+      Text = 'ETA-Methode A'
     end
     object MethodLabel: TLabel
       Left = 268
