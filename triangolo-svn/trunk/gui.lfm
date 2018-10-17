@@ -1,0 +1,207 @@
+object TriangoloMainForm: TTriangoloMainForm
+  Left = 299
+  Height = 342
+  Top = 123
+  Width = 512
+  Caption = 'Triangolo'
+  ClientHeight = 342
+  ClientWidth = 512
+  Constraints.MinHeight = 342
+  Constraints.MinWidth = 512
+  LCLVersion = '2.0.0.1'
+  object ParameterGroupBox: TGroupBox
+    Left = 8
+    Height = 121
+    Top = 8
+    Width = 495
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Parameter'
+    ClientHeight = 99
+    ClientWidth = 487
+    ParentColor = False
+    TabOrder = 0
+    object InitialLT4DoseFloatSpinEdit: TFloatSpinEdit
+      Left = 24
+      Height = 16
+      Hint = 'Levothyroxindosis, die zu einer stabilen Euthyreose mit normaler TSH-Konzentration führt'
+      Top = 32
+      Width = 98
+      Color = 16771544
+      DecimalPlaces = 1
+      MaxValue = 1000
+      MinValue = 0
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Value = 0
+    end
+    object InitialLT4DoseLabel: TLabel
+      Left = 24
+      Height = 16
+      Top = 8
+      Width = 124
+      Caption = 'Initiale L-T4-Dosis:'
+      ParentColor = False
+    end
+    object IntialLT4UnitLabel: TLabel
+      Left = 136
+      Height = 16
+      Top = 32
+      Width = 47
+      Caption = 'µg/Tag'
+      ParentColor = False
+    end
+    object MethodComboBox: TComboBox
+      Left = 268
+      Height = 21
+      Hint = 'Berechnungsmethode nach ETA'
+      Top = 27
+      Width = 196
+      Anchors = [akTop, akRight]
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'Methode A'
+        'Methode B1'
+        'Methode B2'
+        'Methode C'
+      )
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = 'Methode A'
+    end
+    object MethodLabel: TLabel
+      Left = 268
+      Height = 16
+      Top = 7
+      Width = 141
+      Anchors = [akTop, akRight]
+      Caption = 'Berechnungsmethode:'
+      ParentColor = False
+    end
+    object CalculateButton: TButton
+      AnchorSideLeft.Control = ParameterGroupBox
+      AnchorSideLeft.Side = asrCenter
+      Left = 155
+      Height = 25
+      Top = 64
+      Width = 176
+      Caption = 'Berechnen'
+      Default = True
+      OnClick = CalculateButtonClick
+      TabOrder = 2
+    end
+  end
+  object FinalLT4DoseGroupBox: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = DividerBevel1
+    Left = 8
+    Height = 87
+    Top = 136
+    Width = 240
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 8
+    Caption = 'Endgültige Dosierungen:'
+    ClientHeight = 65
+    ClientWidth = 232
+    ParentColor = False
+    TabOrder = 1
+    object FinalLT4DoseEdit: TEdit
+      Left = 24
+      Height = 22
+      Top = 32
+      Width = 80
+      Color = 16771544
+      ReadOnly = True
+      TabOrder = 0
+      Text = '0'
+    end
+    object FinalLT4DoseLabel: TLabel
+      Left = 24
+      Height = 16
+      Top = 8
+      Width = 149
+      Caption = 'Endgültige L-T4-Dosis:'
+      ParentColor = False
+    end
+    object FinalLT4UnitLabel1: TLabel
+      Left = 136
+      Height = 16
+      Top = 32
+      Width = 47
+      Caption = 'µg/Tag'
+      ParentColor = False
+    end
+  end
+  object FinalLT3DoseGroupBox: TGroupBox
+    AnchorSideLeft.Control = DividerBevel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 264
+    Height = 87
+    Top = 136
+    Width = 239
+    Anchors = [akTop, akLeft, akRight]
+    Caption = ' '
+    ClientHeight = 65
+    ClientWidth = 231
+    TabOrder = 2
+    object FinalLT3DoseEdit: TEdit
+      Left = 24
+      Height = 22
+      Top = 32
+      Width = 80
+      Color = clMoneyGreen
+      ReadOnly = True
+      TabOrder = 0
+      Text = '0'
+    end
+    object FinalLT3UnitLabel: TLabel
+      Left = 136
+      Height = 16
+      Top = 32
+      Width = 47
+      Caption = 'µg/Tag'
+      ParentColor = False
+    end
+    object FinalLT3DoseLabel: TLabel
+      Left = 24
+      Height = 16
+      Top = 8
+      Width = 149
+      Caption = 'Endgültige L-T3-Dosis:'
+      ParentColor = False
+    end
+  end
+  object DividerBevel1: TDividerBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 248
+    Height = 75
+    Top = 149
+    Width = 16
+    BevelWidth = 5
+    CaptionSpacing = 0
+    Font.Style = [fsBold]
+    LeftIndent = 10
+    Orientation = trVertical
+    ParentFont = False
+  end
+  object HintGroupBox: TGroupBox
+    Left = 8
+    Height = 84
+    Top = 232
+    Width = 496
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Hinweise:'
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 15
+    Top = 327
+    Width = 512
+    Panels = <>
+  end
+end
