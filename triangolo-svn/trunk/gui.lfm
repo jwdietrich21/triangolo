@@ -1,11 +1,11 @@
 object TriangoloMainForm: TTriangoloMainForm
   Left = 299
-  Height = 342
+  Height = 383
   Top = 123
-  Width = 512
+  Width = 587
   Caption = 'Triangolo'
-  ClientHeight = 342
-  ClientWidth = 512
+  ClientHeight = 383
+  ClientWidth = 587
   Constraints.MinHeight = 342
   Constraints.MinWidth = 512
   Menu = MainMenu1
@@ -15,11 +15,11 @@ object TriangoloMainForm: TTriangoloMainForm
     Left = 8
     Height = 121
     Top = 8
-    Width = 495
+    Width = 570
     Anchors = [akTop, akLeft, akRight]
     Caption = 'Parameter'
     ClientHeight = 99
-    ClientWidth = 487
+    ClientWidth = 562
     ParentColor = False
     TabOrder = 0
     object InitialLT4DoseFloatSpinEdit: TFloatSpinEdit
@@ -54,7 +54,7 @@ object TriangoloMainForm: TTriangoloMainForm
       ParentColor = False
     end
     object MethodComboBox: TComboBox
-      Left = 268
+      Left = 343
       Height = 21
       Hint = 'Berechnungsmethode nach ETA'
       Top = 27
@@ -74,7 +74,7 @@ object TriangoloMainForm: TTriangoloMainForm
       Text = 'ETA-Methode A'
     end
     object MethodLabel: TLabel
-      Left = 268
+      Left = 343
       Height = 16
       Top = 7
       Width = 141
@@ -85,7 +85,7 @@ object TriangoloMainForm: TTriangoloMainForm
     object CalculateButton: TButton
       AnchorSideLeft.Control = ParameterGroupBox
       AnchorSideLeft.Side = asrCenter
-      Left = 155
+      Left = 193
       Height = 25
       Top = 64
       Width = 176
@@ -101,12 +101,12 @@ object TriangoloMainForm: TTriangoloMainForm
     Left = 8
     Height = 87
     Top = 136
-    Width = 240
+    Width = 277
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
     Caption = 'Endgültige Dosierungen:'
     ClientHeight = 65
-    ClientWidth = 232
+    ClientWidth = 269
     ParentColor = False
     TabOrder = 1
     object FinalLT4DoseEdit: TEdit
@@ -140,14 +140,14 @@ object TriangoloMainForm: TTriangoloMainForm
     AnchorSideLeft.Control = DividerBevel1
     AnchorSideLeft.Side = asrBottom
     AnchorSideRight.Side = asrBottom
-    Left = 264
+    Left = 301
     Height = 87
     Top = 136
-    Width = 239
+    Width = 277
     Anchors = [akTop, akLeft, akRight]
     Caption = ' '
     ClientHeight = 65
-    ClientWidth = 231
+    ClientWidth = 269
     TabOrder = 2
     object FinalLT3DoseEdit: TEdit
       Left = 24
@@ -179,7 +179,7 @@ object TriangoloMainForm: TTriangoloMainForm
   object DividerBevel1: TDividerBevel
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    Left = 248
+    Left = 285
     Height = 75
     Top = 149
     Width = 16
@@ -192,18 +192,38 @@ object TriangoloMainForm: TTriangoloMainForm
   end
   object HintGroupBox: TGroupBox
     Left = 8
-    Height = 84
+    Height = 125
     Top = 232
-    Width = 496
+    Width = 571
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Hinweise:'
+    ClientHeight = 103
+    ClientWidth = 563
     TabOrder = 3
+    object RecommendationMemo: TMemo
+      Left = 0
+      Height = 99
+      Top = 2
+      Width = 565
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Lines.Strings = (
+        'Recommendations of the European Thyroid Association:'
+        '1) Administer L-T4 once daily, L-T3 twice daily. '
+        '2) Aim at normalisation of TSH, FT4, FT3 and FT4:FT3 ratio / SPINA-GD '
+        '3) If necessary, change one component at a time '
+        '4) Discontinue combination therapy if it doesn''t result in improvement after 3 months '
+        '5) Monitor cardiovascular and bone health'
+      )
+      ReadOnly = True
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+    end
   end
   object StatusBar1: TStatusBar
     Left = 0
     Height = 15
-    Top = 327
-    Width = 512
+    Top = 368
+    Width = 587
     Panels = <>
   end
   object MainMenu1: TMainMenu

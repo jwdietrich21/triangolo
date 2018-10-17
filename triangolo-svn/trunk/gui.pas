@@ -67,6 +67,7 @@ type
     HintGroupBox: TGroupBox;
     MacAboutItem: TMenuItem;
     MainMenu1: TMainMenu;
+    RecommendationMemo: TMemo;
     MethodLabel: TLabel;
     MethodComboBox: TComboBox;
     IntialLT4UnitLabel: TLabel;
