@@ -2,22 +2,23 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="5">
       <Unit0>
         <Filename Value="triangolo.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="31" Y="3"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="84" Y="27"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="calculator.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Calculator"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="4" Y="2"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -29,12 +30,35 @@
         <UnitName Value="GUI"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="63" Y="33"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="112"/>
+        <CursorPos X="66" Y="135"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\customdrawn\customdrawn_cocoaproc.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1140"/>
+        <CursorPos X="62" Y="1157"/>
+        <UsageCount Value="10"/>
+      </Unit4>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="1">
+      <Position1>
+        <Filename Value="gui.pas"/>
+        <Caret Line="115" Column="117" TopLine="112"/>
+      </Position1>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

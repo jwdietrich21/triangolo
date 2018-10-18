@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
@@ -20,21 +20,34 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="19"/>
+      <BuildNr Value="21"/>
       <Language Value="0809"/>
       <Attributes pvaDebug="True" pvaPreRelease="True"/>
       <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="J. W. Dietrich and Ruhr University of Bochum" ProductName="Triangolo" ProductVersion="1.0.0"/>
     </VersionInfo>
+    <MacroValues Count="1">
+      <Macro2 Name="LCLWidgetType" Value="carbon"/>
+    </MacroValues>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
+      <SharedMatrixOptions Count="7">
+        <Item1 ID="211641247737" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
+        <Item2 ID="603555801766" Modes="Default" Type="IDEMacro" MacroName="LCLWidgetType" Value="carbon"/>
+        <Item3 ID="008918059605" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt"/>
+        <Item4 ID="246819375164" Type="IDEMacro" MacroName="LCLWidgetType" Value="qt5"/>
+        <Item5 ID="804966957032" Type="IDEMacro" MacroName="LCLWidgetType" Value="fpgui"/>
+        <Item6 ID="799075060932" Type="IDEMacro" MacroName="LCLWidgetType" Value="customdrawn"/>
+        <Item7 ID="324745562396" Type="IDEMacro" MacroName="LCLWidgetType" Value="win32"/>
+      </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
     </RunParams>
     <RequiredPackages Count="2">
       <Item1>

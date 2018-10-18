@@ -12,7 +12,7 @@
 { See the file "license.txt", included in this distribution, }
 { for details about the copyright. }
 { Current versions and additional information are available from }
-{ http://puma-repository.sf.net }
+{ http://triangolo.sf.net }
 
 { This program is distributed in the hope that it will be useful, }
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
@@ -122,9 +122,15 @@ begin
   WinAboutItem.Visible := False;
   AppleMenu.Visible := True;
   {$ELSE}
+  {$IFDEF LCLCocoa}
+  modifierKey := [ssMeta];
+  WinAboutItem.Visible := False;
+  AppleMenu.Visible := True;
+  {$ELSE}
   modifierKey := [ssCtrl];
   WinAboutItem.Visible := True;
   AppleMenu.Visible := False;
+  {$ENDIF}
   {$ENDIF}
   NewMenuItem.ShortCut := ShortCut(VK_N, modifierKey);
   OpenMenuItem.ShortCut := ShortCut(VK_O, modifierKey);
