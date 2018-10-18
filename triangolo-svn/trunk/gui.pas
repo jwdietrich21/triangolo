@@ -65,6 +65,7 @@ type
     FinalLT3UnitLabel: TLabel;
     HelpMenu: TMenuItem;
     HintGroupBox: TGroupBox;
+    LogoImage: TImage;
     MacAboutItem: TMenuItem;
     MainMenu1: TMainMenu;
     RecommendationMemo: TMemo;
