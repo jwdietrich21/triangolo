@@ -9,8 +9,8 @@
         <Filename Value="triangolo.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="84" Y="27"/>
-        <UsageCount Value="23"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -18,7 +18,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Calculator"/>
         <CursorPos X="4" Y="2"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -30,27 +30,27 @@
         <UnitName Value="GUI"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="187"/>
-        <CursorPos X="114" Y="194"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="208"/>
+        <CursorPos X="14" Y="211"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="..\..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="5" Y="10"/>
         <UsageCount Value="10"/>
       </Unit3>
       <Unit4>
-        <Filename Value="..\..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\customdrawn\customdrawn_cocoaproc.pas"/>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\customdrawn\customdrawn_cocoaproc.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1140"/>
         <CursorPos X="62" Y="1157"/>
         <UsageCount Value="10"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="3" HistoryIndex="2">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="gui.pas"/>
         <Caret Line="115" Column="117" TopLine="112"/>
@@ -63,6 +63,22 @@
         <Filename Value="gui.pas"/>
         <Caret Line="193" Column="114" TopLine="186"/>
       </Position3>
+      <Position4>
+        <Filename Value="gui.pas"/>
+        <Caret Line="2" Column="15"/>
+      </Position4>
+      <Position5>
+        <Filename Value="gui.pas"/>
+        <Caret Line="88" Column="17" TopLine="203"/>
+      </Position5>
+      <Position6>
+        <Filename Value="gui.pas"/>
+        <Caret Line="224" Column="14" TopLine="205"/>
+      </Position6>
+      <Position7>
+        <Filename Value="gui.pas"/>
+        <Caret Line="2"/>
+      </Position7>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

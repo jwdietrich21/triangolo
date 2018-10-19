@@ -26,7 +26,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Spin, StdCtrls,
-  ExtCtrls, ComCtrls, Menus, DividerBevel, LCLType, ActnList, StdActns,
+  ExtCtrls, ComCtrls, Menus, DividerBevel, LCLType, ActnList, StdActns, Buttons,
   Calculator;
 
 const
@@ -39,7 +39,6 @@ type
   TTriangoloMainForm = class(TForm)
     ActionList1: TActionList;
     AppleMenu: TMenuItem;
-    CalculateButton: TButton;
     CloseMenuItem: TMenuItem;
     CopyMenuItem: TMenuItem;
     CutMenuItem: TMenuItem;
@@ -81,11 +80,12 @@ type
     QuitMenuItem: TMenuItem;
     RedoMenuItem: TMenuItem;
     SaveMenuItem: TMenuItem;
+    CalculateSpeedButton: TSpeedButton;
     StatusBar1: TStatusBar;
     UndoMenuItem: TMenuItem;
     WinAboutItem: TMenuItem;
     procedure AdaptMenus;
-    procedure CalculateButtonClick(Sender: TObject);
+    procedure Go(Sender: TObject);
     procedure CloseMenuItemClick(Sender: TObject);
     procedure EditCopy1Execute(Sender: TObject);
     procedure EditCut1Execute(Sender: TObject);
@@ -94,8 +94,11 @@ type
     procedure EditSelectAll1Execute(Sender: TObject);
     procedure EditUndo1Execute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure InitialLT4DoseFloatSpinEditEditingDone(Sender: TObject);
+    procedure InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
     procedure MacAboutItemClick(Sender: TObject);
     procedure QuitMenuItemClick(Sender: TObject);
+    procedure CalculateSpeedButtonClick(Sender: TObject);
     procedure WinAboutItemClick(Sender: TObject);
   private
 
@@ -145,7 +148,7 @@ begin
   PasteMenuItem.ShortCut := ShortCut(VK_V, modifierKey);
 end;
 
-procedure TTriangoloMainForm.CalculateButtonClick(Sender: TObject);
+procedure TTriangoloMainForm.Go(Sender: TObject);
 var
   selectedMethod: TMethod;
 begin
@@ -202,6 +205,17 @@ begin
   AdaptMenus;
 end;
 
+procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEditingDone(
+  Sender: TObject);
+begin
+  Go(Sender);
+end;
+
+procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
+begin
+  Go(Sender);
+end;
+
 procedure TTriangoloMainForm.MacAboutItemClick(Sender: TObject);
 begin
   ShowMessage(kAboutMessage);
@@ -210,6 +224,11 @@ end;
 procedure TTriangoloMainForm.QuitMenuItemClick(Sender: TObject);
 begin
   application.Terminate;
+end;
+
+procedure TTriangoloMainForm.CalculateSpeedButtonClick(Sender: TObject);
+begin
+  Go(Sender);
 end;
 
 procedure TTriangoloMainForm.WinAboutItemClick(Sender: TObject);
