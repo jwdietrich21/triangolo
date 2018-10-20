@@ -1,290 +1,114 @@
-object TriangoloMainForm: TTriangoloMainForm
-  Left = 569
-  Height = 400
-  Top = 234
-  Width = 594
-  ActiveControl = InitialLT4DoseFloatSpinEdit
-  Caption = 'Triangolo'
-  ClientHeight = 400
-  ClientWidth = 594
+object AboutForm: TAboutForm
+  Left = 301
+  Height = 218
+  Top = 191
+  Width = 398
+  BorderStyle = bsDialog
+  Caption = 'Über Triangolo'
+  ClientHeight = 218
+  ClientWidth = 398
   Color = clWhite
-  Constraints.MinHeight = 342
-  Constraints.MinWidth = 512
-  Icon.Data = {
-    7E04000000000100010010100000010020006804000016000000280000001000
-    0000200000000100200000000000000400006400000064000000000000000000
-    0000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000F870F110089
-    140D000000000000000000000000000000000000000000000000000000000000
-    0000000000000000000400000016060C062B0F841757128E1990128C1A9E1288
-    163A00000000000000000000000600000018000000310000004A000000680000
-    008B010E03B3051705D0051B06D1011003C4092D0BBC0F931934006D00070000
-    0000000000000000004F000000AF000000AD000600A4092609C90C450EEC0D5A
-    12E90F6412AE0D6E1464108F1820000700680000007400000000000000000000
-    0000000000000000000F000000190000000614AD1F1911961B85139E1A4F17B9
-    1716000000000000000000000007000000AE0000001F00000000000000000000
-    0000000000400000003500000000000000000000000000000000000000000000
-    00000000000000000000000000590000008A0000000000000000000000000000
-    000000000030000000AB00000009000000000000000000000000000000000000
-    00000000000000000006000000AC000000290000000000000000000000000000
-    0000000000000000007E0000006B000000000000000000000000000000000000
-    0000000000000000004C00000097000000000000000000000000000000000000
-    00000000000000000013000000B40000001D0000000000000000000000000000
-    000000000002000000A700000036000000000000000000000000000000000000
-    000000000000000000000000005D000000920000000000000000000000000000
-    000000000040000000A200000001000000000000000000000000000000000000
-    0000000000000000000000000005000000AC0000003E00000000000000000000
-    0000000000A00000004400000000000000000000000000000000000000000000
-    00000000000000000000000000000000003A000000B100000007000000000000
-    0034000000AB0000000300000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000009400000067000000000000
-    009A000000520000000000000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000001E000000C0000000680000
-    00B5000000070000000000000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000000000000057000000D50000
-    0048000000000000000000000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000000000000000000000080000
-    0000000000000000000000000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000000000000000000000000000
-    0000000000000000000000000000000000000000000000000000000000000000
-    0000
-  }
-  Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '2.0.0.1'
-  object ParameterGroupBox: TGroupBox
-    Left = 8
-    Height = 117
-    Top = 57
-    Width = 577
-    Anchors = [akTop, akLeft, akRight]
-    Caption = 'Parameter'
-    ClientHeight = 95
-    ClientWidth = 569
+  object VersionLabel: TLabel
+    Left = 16
+    Height = 13
+    Top = 40
+    Width = 71
+    Caption = 'Version x.x.x'
+    Font.Height = -11
+    Font.Pitch = fpVariable
     ParentColor = False
-    TabOrder = 0
-    object InitialLT4DoseFloatSpinEdit: TFloatSpinEdit
-      Left = 24
-      Height = 16
-      Hint = 'Levothyroxindosis, die zu einer stabilen Euthyreose mit normaler TSH-Konzentration führt'
-      Top = 32
-      Width = 98
-      Color = 16771544
-      DecimalPlaces = 1
-      MaxValue = 1000
-      MinValue = 0
-      OnEditingDone = InitialLT4DoseFloatSpinEditEditingDone
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 0
-      Value = 0
-    end
-    object InitialLT4DoseLabel: TLabel
-      AnchorSideLeft.Control = InitialLT4DoseFloatSpinEdit
-      Left = 24
-      Height = 16
-      Top = 8
-      Width = 124
-      Caption = 'Initiale L-T4-Dosis:'
-      ParentColor = False
-    end
-    object IntialLT4UnitLabel: TLabel
-      Left = 136
-      Height = 16
-      Top = 32
-      Width = 47
-      Caption = 'µg/Tag'
-      ParentColor = False
-    end
-    object MethodComboBox: TComboBox
-      AnchorSideLeft.Control = CalculateSpeedButton
-      Left = 320
-      Height = 21
-      Hint = 'Berechnungsmethode nach ETA'
-      Top = 27
-      Width = 226
-      Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 119
-      ItemHeight = 0
-      ItemIndex = 0
-      Items.Strings = (
-        'ETA-Methode A'
-        'ETA-Methode B1'
-        'ETA-Methode B2'
-        'ETA-Methode C'
-      )
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 1
-      Text = 'ETA-Methode A'
-    end
-    object MethodLabel: TLabel
-      AnchorSideLeft.Control = MethodComboBox
-      Left = 320
-      Height = 16
-      Top = 7
-      Width = 171
-      Anchors = [akTop, akLeft, akRight]
-      Caption = 'Berechnungsmethode:'
-      ParentColor = False
-    end
-    object CalculateSpeedButton: TSpeedButton
-      AnchorSideLeft.Control = ParameterGroupBox
-      AnchorSideLeft.Side = asrCenter
-      Left = 201
-      Height = 32
-      Top = 56
-      Width = 166
-      Caption = 'Berechnen'
-      OnClick = CalculateSpeedButtonClick
-    end
-  end
-  object FinalLT4DoseGroupBox: TGroupBox
-    AnchorSideLeft.Control = Owner
-    AnchorSideRight.Control = DividerBevel1
-    Left = 8
-    Height = 87
-    Top = 179
-    Width = 284
-    Anchors = [akTop, akLeft, akRight]
-    BorderSpacing.Left = 8
-    BorderSpacing.Right = 5
-    Caption = 'Endgültige Dosierungen:'
-    ClientHeight = 65
-    ClientWidth = 276
-    ParentColor = False
-    TabOrder = 1
-    object FinalLT4DoseEdit: TEdit
-      Left = 24
-      Height = 22
-      Top = 32
-      Width = 80
-      Color = 16771544
-      ReadOnly = True
-      TabOrder = 0
-      Text = '0'
-    end
-    object FinalLT4DoseLabel: TLabel
-      AnchorSideLeft.Control = FinalLT4DoseEdit
-      Left = 24
-      Height = 16
-      Top = 8
-      Width = 149
-      Caption = 'Endgültige L-T4-Dosis:'
-      ParentColor = False
-    end
-    object FinalLT4UnitLabel1: TLabel
-      Left = 136
-      Height = 16
-      Top = 32
-      Width = 47
-      Caption = 'µg/Tag'
-      ParentColor = False
-    end
-  end
-  object FinalLT3DoseGroupBox: TGroupBox
-    AnchorSideLeft.Control = DividerBevel1
-    AnchorSideLeft.Side = asrBottom
-    AnchorSideRight.Side = asrBottom
-    Left = 303
-    Height = 87
-    Top = 179
-    Width = 282
-    Anchors = [akTop, akLeft, akRight]
-    BorderSpacing.Left = 5
-    Caption = ' '
-    ClientHeight = 65
-    ClientWidth = 274
-    ParentColor = False
-    TabOrder = 2
-    object FinalLT3DoseEdit: TEdit
-      Left = 24
-      Height = 22
-      Top = 32
-      Width = 80
-      Color = clMoneyGreen
-      ReadOnly = True
-      TabOrder = 0
-      Text = '0'
-    end
-    object FinalLT3UnitLabel: TLabel
-      Left = 136
-      Height = 16
-      Top = 32
-      Width = 47
-      Caption = 'µg/Tag'
-      ParentColor = False
-    end
-    object FinalLT3DoseLabel: TLabel
-      Left = 24
-      Height = 16
-      Top = 8
-      Width = 149
-      Caption = 'Endgültige L-T3-Dosis:'
-      ParentColor = False
-    end
-  end
-  object DividerBevel1: TDividerBevel
-    AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
-    Left = 297
-    Height = 75
-    Top = 185
-    Width = 1
-    AutoSize = False
-    BevelWidth = 5
-    CaptionSpacing = 0
-    Font.Style = [fsBold]
-    LeftIndent = 10
-    Orientation = trVertical
     ParentFont = False
   end
-  object HintGroupBox: TGroupBox
-    Left = 8
-    Height = 109
-    Top = 272
-    Width = 578
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    Caption = 'Hinweise:'
-    ClientHeight = 87
-    ClientWidth = 570
-    TabOrder = 3
-    object RecommendationMemo: TMemo
-      Left = 0
-      Height = 83
-      Top = 2
-      Width = 572
-      Anchors = [akTop, akLeft, akRight, akBottom]
-      Lines.Strings = (
-        'Recommendations of the European Thyroid Association:'
-        '1) Administer L-T4 once daily, L-T3 twice daily. '
-        '2) Aim at normalisation of TSH, FT4, FT3 and FT4:FT3 ratio / SPINA-GD '
-        '3) If necessary, change one component at a time '
-        '4) Discontinue combination therapy if it doesn''t result in improvement after 3 months '
-        '5) Monitor cardiovascular and bone health'
-      )
-      ReadOnly = True
-      ScrollBars = ssAutoVertical
-      TabOrder = 0
-    end
+  object CopyrightLabel1: TLabel
+    Left = 16
+    Height = 13
+    Top = 66
+    Width = 81
+    Caption = '© 2012 – 2018'
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
   end
-  object StatusBar1: TStatusBar
-    Left = 0
-    Height = 15
-    Top = 385
-    Width = 594
-    Panels = <>
-    SimpleText = '   Triangolo 1.0 Alpha | For testing only'
+  object CopyrightLabel2: TLabel
+    Left = 16
+    Height = 13
+    Top = 80
+    Width = 69
+    Caption = 'J. W. Dietrich'
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
   end
-  object LogoImage: TImage
-    Left = 380
+  object CopyrightLabel3: TLabel
+    Left = 16
+    Height = 13
+    Top = 104
+    Width = 103
+    Caption = 'In Kooperation mit:'
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
+  end
+  object CopyrightLabel6: TLabel
+    Left = 16
+    Height = 13
+    Top = 132
+    Width = 135
+    Caption = 'Ruhr-Universität Bochum'
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
+  end
+  object CopyrightLabel7: TLabel
+    Left = 16
+    Height = 13
+    Top = 146
+    Width = 191
+    Caption = 'Universitätsklinikum Bergmannsheil'
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
+  end
+  object TriangoloURL: TLabel
+    Cursor = crHandPoint
+    Left = 16
+    Height = 13
+    Top = 172
+    Width = 82
+    Caption = 'triangolo.sf.net'
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
+    OnClick = TriangoloURLClick
+  end
+  object OKButton: TButton
+    Left = 300
+    Height = 25
+    Top = 157
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = OKButtonClick
+    TabOrder = 0
+  end
+  object TriangoloLogo: TImage
+    Left = 172
     Height = 56
-    Top = 8
-    Width = 180
+    Top = 32
+    Width = 210
     Anchors = [akTop, akRight]
     Center = True
-    Enabled = False
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869636818000089504E47
       0D0A1A0A0000000D49484452000000AC00000031080600000047C9424500000A
@@ -484,128 +308,5 @@ object TriangoloMainForm: TTriangoloMainForm
       75534F23186C40F454547B20FEE3FF03A61CF8D8CB06B8200000000049454E44
       AE426082
     }
-    Transparent = True
-  end
-  object MainMenu1: TMainMenu
-    left = 496
-    top = 133
-    object AppleMenu: TMenuItem
-      Caption = ''
-      object MacAboutItem: TMenuItem
-        Caption = 'Über Triangolo'
-        OnClick = MacAboutItemClick
-      end
-    end
-    object FileMenu: TMenuItem
-      Caption = 'Ablage'
-      object NewMenuItem: TMenuItem
-        Caption = 'Neu'
-        Enabled = False
-        ShortCut = 16462
-      end
-      object Divider11: TMenuItem
-        Caption = '-'
-      end
-      object OpenMenuItem: TMenuItem
-        Caption = 'Öffnen'
-        Enabled = False
-        ShortCut = 16463
-      end
-      object SaveMenuItem: TMenuItem
-        Caption = 'Sichern'
-        Enabled = False
-        ShortCut = 16467
-      end
-      object CloseMenuItem: TMenuItem
-        Caption = 'Schließen'
-        ShortCut = 16471
-        OnClick = CloseMenuItemClick
-      end
-      object Divider12: TMenuItem
-        Caption = '-'
-      end
-      object QuitMenuItem: TMenuItem
-        Caption = 'Beenden'
-        ShortCut = 16465
-        OnClick = QuitMenuItemClick
-      end
-    end
-    object EditMenu: TMenuItem
-      Caption = 'Bearbeiten'
-      object UndoMenuItem: TMenuItem
-        Action = EditUndo1
-        Caption = 'Widerrufen'
-      end
-      object RedoMenuItem: TMenuItem
-        Caption = 'Wiederholen'
-        Enabled = False
-        ShortCut = 24666
-      end
-      object Divider21: TMenuItem
-        Caption = '-'
-      end
-      object CutMenuItem: TMenuItem
-        Action = EditCut1
-      end
-      object CopyMenuItem: TMenuItem
-        Action = EditCopy1
-      end
-      object PasteMenuItem: TMenuItem
-        Action = EditPaste1
-      end
-    end
-    object HelpMenu: TMenuItem
-      Caption = 'Hilfe'
-      object WinAboutItem: TMenuItem
-        Caption = 'Über Triangolo'
-        OnClick = WinAboutItemClick
-      end
-    end
-  end
-  object ActionList1: TActionList
-    left = 424
-    top = 133
-    object EditCut1: TEditCut
-      Category = 'Edit'
-      Caption = '&Ausschneiden'
-      Hint = 'Ausschneiden'
-      OnExecute = EditCut1Execute
-      ShortCut = 16472
-    end
-    object EditCopy1: TEditCopy
-      Category = 'Edit'
-      Caption = '&Kopieren'
-      Hint = 'Kopieren'
-      OnExecute = EditCopy1Execute
-      ShortCut = 16451
-    end
-    object EditPaste1: TEditPaste
-      Category = 'Edit'
-      Caption = '&Einfügen'
-      Hint = 'Einfügen'
-      OnExecute = EditPaste1Execute
-      ShortCut = 16470
-    end
-    object EditSelectAll1: TEditSelectAll
-      Category = 'Edit'
-      Caption = '&Alles markieren'
-      Hint = 'Alles markieren'
-      OnExecute = EditSelectAll1Execute
-      ShortCut = 16449
-    end
-    object EditUndo1: TEditUndo
-      Category = 'Edit'
-      Caption = '&Zurücknehmen'
-      Hint = 'Zurücknehmen'
-      OnExecute = EditUndo1Execute
-      ShortCut = 16474
-    end
-    object EditDelete1: TEditDelete
-      Category = 'Edit'
-      Caption = '&Löschen'
-      Hint = 'Löschen'
-      OnExecute = EditDelete1Execute
-      ShortCut = 46
-    end
   end
 end

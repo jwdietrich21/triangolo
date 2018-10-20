@@ -27,10 +27,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Spin, StdCtrls,
   ExtCtrls, ComCtrls, Menus, DividerBevel, LCLType, ActnList, StdActns, Buttons,
-  Calculator;
-
-const
-  kAboutMessage = 'Triangolo by JWD 2018';
+  Calculator, AboutWindow;
 
 type
 
@@ -212,7 +209,7 @@ end;
 
 procedure TTriangoloMainForm.MacAboutItemClick(Sender: TObject);
 begin
-  ShowMessage(kAboutMessage);
+  AboutForm.ShowModal;
 end;
 
 procedure TTriangoloMainForm.QuitMenuItemClick(Sender: TObject);

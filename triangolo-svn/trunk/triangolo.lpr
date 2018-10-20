@@ -27,7 +27,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazcontrols, GUI
+  Forms, lazcontrols, GUI, AboutWindow
   { you can add units after this };
 
 {$R *.res}
@@ -38,6 +38,7 @@ begin
   Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TTriangoloMainForm, TriangoloMainForm);
+  Application.CreateForm(TAboutForm, AboutForm);
   Application.Run;
 end.
 
