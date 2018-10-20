@@ -95,7 +95,6 @@ type
     procedure EditUndo1Execute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEditingDone(Sender: TObject);
-    procedure InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
     procedure MacAboutItemClick(Sender: TObject);
     procedure QuitMenuItemClick(Sender: TObject);
     procedure CalculateSpeedButtonClick(Sender: TObject);
@@ -207,11 +206,6 @@ end;
 
 procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEditingDone(
   Sender: TObject);
-begin
-  Go(Sender);
-end;
-
-procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
 begin
   Go(Sender);
 end;

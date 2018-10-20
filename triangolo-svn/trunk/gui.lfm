@@ -1,7 +1,7 @@
 object TriangoloMainForm: TTriangoloMainForm
-  Left = 584
+  Left = 437
   Height = 400
-  Top = 184
+  Top = 185
   Width = 594
   ActiveControl = InitialLT4DoseFloatSpinEdit
   Caption = 'Triangolo'
@@ -75,7 +75,6 @@ object TriangoloMainForm: TTriangoloMainForm
       MaxValue = 1000
       MinValue = 0
       OnEditingDone = InitialLT4DoseFloatSpinEditEditingDone
-      OnEnter = InitialLT4DoseFloatSpinEditEnter
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
