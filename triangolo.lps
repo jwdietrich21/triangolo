@@ -4,12 +4,12 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="14">
+    <Units Count="15">
       <Unit0>
         <Filename Value="triangolo.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="8" Y="2"/>
+        <CursorPos X="11" Y="2"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -17,7 +17,6 @@
         <Filename Value="calculator.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Calculator"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="44" Y="6"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
@@ -42,20 +41,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutWindow"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="12" Y="2"/>
+        <CursorPos X="47" Y="18"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="versionsupport.pas"/>
-        <IsPartOfProject Value="True"/>
         <UnitName Value="VersionSupport"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="16" Y="5"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
@@ -120,8 +118,18 @@
         <EditorIndex Value="-1"/>
         <UsageCount Value="10"/>
       </Unit13>
+      <Unit14>
+        <Filename Value="environmentinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="EnvironmentInfo"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="27" Y="7"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit14>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="23" HistoryIndex="22">
       <Position1>
         <Filename Value="gui.pas"/>
         <Caret Line="216" Column="7" TopLine="200"/>
@@ -203,37 +211,17 @@
         <Caret Line="63" Column="3" TopLine="38"/>
       </Position20>
       <Position21>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="86" Column="29" TopLine="76"/>
-      </Position21>
-      <Position22>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="5" Column="94"/>
-      </Position22>
-      <Position23>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="61" Column="54" TopLine="35"/>
-      </Position23>
-      <Position24>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="61" Column="42" TopLine="35"/>
-      </Position24>
-      <Position25>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="86" Column="29" TopLine="69"/>
-      </Position25>
-      <Position26>
-        <Filename Value="versionsupport.pas"/>
-        <Caret Line="85" Column="43" TopLine="69"/>
-      </Position26>
-      <Position27>
         <Filename Value="aboutwindow.pas"/>
         <Caret Line="8" Column="36"/>
-      </Position27>
-      <Position28>
+      </Position21>
+      <Position22>
         <Filename Value="aboutwindow.pas"/>
         <Caret Line="45" Column="43" TopLine="40"/>
-      </Position28>
+      </Position22>
+      <Position23>
+        <Filename Value="environmentinfo.pas"/>
+        <Caret Line="7" Column="27"/>
+      </Position23>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

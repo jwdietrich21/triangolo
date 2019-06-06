@@ -26,7 +26,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  LCLIntf, VersionSupport;
+  LCLIntf, EnvironmentInfo;
 
 type
 
@@ -62,7 +62,7 @@ implementation
 
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
-  VersionLabel.Caption := 'Version ' + GetFileVersion;
+  VersionLabel.Caption := 'Version ' + FileVersion;
 end;
 
 procedure TAboutForm.OKButtonClick(Sender: TObject);
