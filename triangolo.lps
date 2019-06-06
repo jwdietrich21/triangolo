@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="11" Y="2"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -18,7 +18,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Calculator"/>
         <CursorPos X="44" Y="6"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -29,8 +29,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="GUI"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="12" Y="2"/>
-        <UsageCount Value="26"/>
+        <CursorPos X="4" Y="2"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit2>
@@ -43,185 +43,214 @@
         <UnitName Value="AboutWindow"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="47" Y="18"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="50"/>
+        <CursorPos X="10" Y="55"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="versionsupport.pas"/>
-        <UnitName Value="VersionSupport"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="16" Y="5"/>
-        <UsageCount Value="20"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="5" Y="10"/>
-        <UsageCount Value="10"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\customdrawn\customdrawn_cocoaproc.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1140"/>
-        <CursorPos X="62" Y="1157"/>
-        <UsageCount Value="10"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\include\spinedit.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="144"/>
-        <CursorPos Y="154"/>
-        <UsageCount Value="10"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfacebase.pp"/>
-        <UnitName Value="InterfaceBase"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="44"/>
-        <CursorPos X="40" Y="148"/>
-        <UsageCount Value="10"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\lclplatformdef.pas"/>
-        <UnitName Value="LCLPlatformDef"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="12" Y="33"/>
-        <UsageCount Value="10"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="..\..\..\..\..\..\usr\local\share\fpcsrc\packages\fcl-res\src\versiontypes.pp"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="171"/>
-        <UsageCount Value="10"/>
-      </Unit10>
-      <Unit11>
-        <Filename Value="..\..\..\..\..\..\usr\local\share\fpcsrc\packages\fcl-res\src\versionresource.pp"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="20"/>
-        <CursorPos X="44" Y="23"/>
-        <UsageCount Value="10"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\lclversion.pas"/>
-        <UnitName Value="LCLVersion"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="28"/>
-        <CursorPos X="13" Y="35"/>
-        <UsageCount Value="10"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="..\..\..\..\..\..\Developer\lazarus\components\lazutils\lazversion.pas"/>
-        <UnitName Value="LazVersion"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
-      </Unit13>
-      <Unit14>
         <Filename Value="environmentinfo.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="EnvironmentInfo"/>
         <EditorIndex Value="1"/>
         <TopLine Value="25"/>
         <CursorPos X="27" Y="7"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="versionsupport.pas"/>
+        <UnitName Value="VersionSupport"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="5"/>
+        <UsageCount Value="20"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\fpgui\fpguicrosshelpers.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfaces\customdrawn\customdrawn_cocoaproc.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1140"/>
+        <CursorPos X="62" Y="1157"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\include\spinedit.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="144"/>
+        <CursorPos Y="154"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\interfacebase.pp"/>
+        <UnitName Value="InterfaceBase"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="40" Y="148"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\lclplatformdef.pas"/>
+        <UnitName Value="LCLPlatformDef"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="12" Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\..\..\..\usr\local\share\fpcsrc\packages\fcl-res\src\versiontypes.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="171"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\..\..\..\..\usr\local\share\fpcsrc\packages\fcl-res\src\versionresource.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="44" Y="23"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\lcl\lclversion.pas"/>
+        <UnitName Value="LCLVersion"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="13" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\..\..\..\..\..\Developer\lazarus\components\lazutils\lazversion.pas"/>
+        <UnitName Value="LazVersion"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
       </Unit14>
     </Units>
-    <JumpHistory Count="23" HistoryIndex="22">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="gui.pas"/>
-        <Caret Line="216" Column="7" TopLine="200"/>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="45" TopLine="40"/>
       </Position1>
       <Position2>
         <Filename Value="gui.pas"/>
-        <Caret Line="231" Column="5" TopLine="215"/>
+        <Caret Line="162" TopLine="153"/>
       </Position2>
       <Position3>
         <Filename Value="gui.pas"/>
-        <Caret Line="88" Column="17" TopLine="79"/>
+        <Caret Line="21"/>
       </Position3>
       <Position4>
-        <Filename Value="gui.pas"/>
-        <Caret Line="151" Column="32" TopLine="135"/>
+        <Filename Value="aboutwindow.pas"/>
+        <Caret Line="8" Column="27"/>
       </Position4>
       <Position5>
-        <Filename Value="gui.pas"/>
-        <Caret Line="211" Column="5" TopLine="195"/>
+        <Filename Value="aboutwindow.pas"/>
+        <Caret Line="21" Column="17"/>
       </Position5>
       <Position6>
-        <Filename Value="gui.pas"/>
-        <Caret Line="214" TopLine="200"/>
+        <Filename Value="aboutwindow.pas"/>
+        <Caret Line="63" Column="3" TopLine="38"/>
       </Position6>
       <Position7>
-        <Filename Value="gui.pas"/>
-        <Caret Line="71" Column="11" TopLine="55"/>
+        <Filename Value="aboutwindow.pas"/>
+        <Caret Line="8" Column="36"/>
       </Position7>
       <Position8>
-        <Filename Value="gui.pas"/>
-        <Caret Line="72" Column="11" TopLine="56"/>
+        <Filename Value="aboutwindow.pas"/>
+        <Caret Line="45" Column="43" TopLine="40"/>
       </Position8>
       <Position9>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="45" TopLine="33"/>
+        <Filename Value="environmentinfo.pas"/>
+        <Caret Line="7" Column="27"/>
       </Position9>
       <Position10>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="48" TopLine="33"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="2" Column="12"/>
       </Position10>
       <Position11>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="49" TopLine="33"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="201" Column="13" TopLine="199"/>
       </Position11>
       <Position12>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="50" TopLine="34"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="84" Column="25" TopLine="84"/>
       </Position12>
       <Position13>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="51" TopLine="35"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="114" Column="40" TopLine="110"/>
       </Position13>
       <Position14>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="80" TopLine="64"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="84" Column="31" TopLine="77"/>
       </Position14>
       <Position15>
-        <Filename Value="calculator.pas"/>
-        <Caret Line="45" TopLine="40"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="122" Column="46" TopLine="114"/>
       </Position15>
       <Position16>
         <Filename Value="gui.pas"/>
-        <Caret Line="162" TopLine="153"/>
+        <Caret Line="123" Column="46" TopLine="115"/>
       </Position16>
       <Position17>
         <Filename Value="gui.pas"/>
-        <Caret Line="21"/>
+        <Caret Line="122" Column="46" TopLine="114"/>
       </Position17>
       <Position18>
-        <Filename Value="aboutwindow.pas"/>
-        <Caret Line="8" Column="27"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="226" Column="5" TopLine="208"/>
       </Position18>
       <Position19>
-        <Filename Value="aboutwindow.pas"/>
-        <Caret Line="21" Column="17"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="85" Column="17" TopLine="85"/>
       </Position19>
       <Position20>
-        <Filename Value="aboutwindow.pas"/>
-        <Caret Line="63" Column="3" TopLine="38"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="158" Column="40" TopLine="115"/>
       </Position20>
       <Position21>
-        <Filename Value="aboutwindow.pas"/>
-        <Caret Line="8" Column="36"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="157" Column="40" TopLine="132"/>
       </Position21>
       <Position22>
-        <Filename Value="aboutwindow.pas"/>
-        <Caret Line="45" Column="43" TopLine="40"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="164" Column="40" TopLine="139"/>
       </Position22>
       <Position23>
-        <Filename Value="environmentinfo.pas"/>
-        <Caret Line="7" Column="27"/>
+        <Filename Value="gui.pas"/>
+        <Caret Line="154" Column="3" TopLine="139"/>
       </Position23>
+      <Position24>
+        <Filename Value="gui.pas"/>
+        <Caret Line="153" Column="3" TopLine="138"/>
+      </Position24>
+      <Position25>
+        <Filename Value="gui.pas"/>
+        <Caret Line="154" Column="3" TopLine="139"/>
+      </Position25>
+      <Position26>
+        <Filename Value="gui.pas"/>
+        <Caret Line="238" Column="3" TopLine="217"/>
+      </Position26>
+      <Position27>
+        <Filename Value="gui.pas"/>
+        <Caret Line="229" Column="14" TopLine="223"/>
+      </Position27>
+      <Position28>
+        <Filename Value="gui.pas"/>
+        <Caret Line="219" Column="14" TopLine="217"/>
+      </Position28>
+      <Position29>
+        <Filename Value="gui.pas"/>
+        <Caret Line="240" Column="14" TopLine="217"/>
+      </Position29>
+      <Position30>
+        <Filename Value="gui.pas"/>
+        <Caret Line="239" Column="14" TopLine="216"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

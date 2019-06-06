@@ -77,11 +77,11 @@ type
     QuitMenuItem: TMenuItem;
     RedoMenuItem: TMenuItem;
     SaveMenuItem: TMenuItem;
-    CalculateSpeedButton: TSpeedButton;
     StatusBar1: TStatusBar;
     UndoMenuItem: TMenuItem;
     WinAboutItem: TMenuItem;
-    procedure AdaptMenus;
+    procedure AdaptForPlatform;
+    procedure CalculateButtonClick(Sender: TObject);
     procedure Go(Sender: TObject);
     procedure CloseMenuItemClick(Sender: TObject);
     procedure EditCopy1Execute(Sender: TObject);
@@ -91,8 +91,11 @@ type
     procedure EditSelectAll1Execute(Sender: TObject);
     procedure EditUndo1Execute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure InitialLT4DoseFloatSpinEditChange(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEditingDone(Sender: TObject);
+    procedure InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
     procedure MacAboutItemClick(Sender: TObject);
+    procedure MethodComboBoxChange(Sender: TObject);
     procedure QuitMenuItemClick(Sender: TObject);
     procedure CalculateSpeedButtonClick(Sender: TObject);
     procedure WinAboutItemClick(Sender: TObject);
@@ -111,7 +114,7 @@ implementation
 
 { TTriangoloMainForm }
 
-procedure TTriangoloMainForm.AdaptMenus;
+procedure TTriangoloMainForm.AdaptForPlatform;
 { Adapts Menus and Shortcuts to the interface style guidelines
   of the respective operating system }
 var
@@ -126,6 +129,10 @@ begin
   modifierKey := [ssMeta];
   WinAboutItem.Visible := False;
   AppleMenu.Visible := True;
+  Color := clDefault;
+  InitialLT4DoseFloatSpinEdit.Color := clDefault;
+  FinalLT4DoseEdit.Color := clDefault;
+  FinalLT3DoseEdit.Color := clDefault;
   {$ELSE}
   modifierKey := [ssCtrl];
   WinAboutItem.Visible := True;
@@ -142,6 +149,11 @@ begin
   CutMenuItem.ShortCut := ShortCut(VK_X, modifierKey);
   CopyMenuItem.ShortCut := ShortCut(VK_C, modifierKey);
   PasteMenuItem.ShortCut := ShortCut(VK_V, modifierKey);
+end;
+
+procedure TTriangoloMainForm.CalculateButtonClick(Sender: TObject);
+begin
+  Go(Sender);
 end;
 
 procedure TTriangoloMainForm.Go(Sender: TObject);
@@ -198,7 +210,12 @@ end;
 
 procedure TTriangoloMainForm.FormCreate(Sender: TObject);
 begin
-  AdaptMenus;
+  AdaptForPlatform;
+end;
+
+procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditChange(Sender: TObject);
+begin
+  Go(Sender);
 end;
 
 procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEditingDone(
@@ -207,9 +224,19 @@ begin
   Go(Sender);
 end;
 
+procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
+begin
+  Go(Sender);
+end;
+
 procedure TTriangoloMainForm.MacAboutItemClick(Sender: TObject);
 begin
   AboutForm.ShowModal;
+end;
+
+procedure TTriangoloMainForm.MethodComboBoxChange(Sender: TObject);
+begin
+  Go(Sender);
 end;
 
 procedure TTriangoloMainForm.QuitMenuItemClick(Sender: TObject);
