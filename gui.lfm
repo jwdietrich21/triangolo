@@ -52,7 +52,7 @@ object TriangoloMainForm: TTriangoloMainForm
   Menu = MainMenu1
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.0.0.1'
+  LCLVersion = '2.0.2.0'
   object ParameterGroupBox: TGroupBox
     Left = 8
     Height = 117
