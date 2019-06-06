@@ -33,7 +33,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Title := 'Triangolo';
+  Application.Title:='Triangolo';
   RequireDerivedFormResource := True;
   Application.Scaled := True;
   Application.Initialize;

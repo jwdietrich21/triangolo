@@ -63,6 +63,9 @@ implementation
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   VersionLabel.Caption := 'Version ' + FileVersion;
+  {$IFDEF LCLCocoa}
+  Color := clDefault;
+  {$ENDIF}
 end;
 
 procedure TAboutForm.OKButtonClick(Sender: TObject);

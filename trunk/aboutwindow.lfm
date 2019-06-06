@@ -84,7 +84,7 @@ object AboutForm: TAboutForm
     Top = 172
     Width = 82
     Caption = 'triangolo.sf.net'
-    Font.Color = clNavy
+    Font.Color = clGray
     Font.Height = -11
     Font.Pitch = fpVariable
     ParentColor = False
