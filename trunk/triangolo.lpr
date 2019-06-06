@@ -27,7 +27,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazcontrols, GUI, AboutWindow
+  Forms, lazcontrols, EnvironmentInfo, GUI, AboutWindow
   { you can add units after this };
 
 {$R *.res}

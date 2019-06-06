@@ -1,11 +1,11 @@
 object TriangoloMainForm: TTriangoloMainForm
   Left = 569
-  Height = 400
+  Height = 437
   Top = 234
   Width = 594
   ActiveControl = InitialLT4DoseFloatSpinEdit
   Caption = 'Triangolo'
-  ClientHeight = 400
+  ClientHeight = 437
   ClientWidth = 594
   Color = clWhite
   Constraints.MinHeight = 342
@@ -242,17 +242,17 @@ object TriangoloMainForm: TTriangoloMainForm
   end
   object HintGroupBox: TGroupBox
     Left = 8
-    Height = 109
+    Height = 146
     Top = 272
     Width = 578
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Hinweise:'
-    ClientHeight = 87
+    ClientHeight = 124
     ClientWidth = 570
     TabOrder = 3
     object RecommendationMemo: TMemo
       Left = 0
-      Height = 83
+      Height = 120
       Top = 2
       Width = 572
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -272,7 +272,7 @@ object TriangoloMainForm: TTriangoloMainForm
   object StatusBar1: TStatusBar
     Left = 0
     Height = 15
-    Top = 385
+    Top = 422
     Width = 594
     Panels = <>
     SimpleText = '   Triangolo 1.0 Alpha | For testing only'
