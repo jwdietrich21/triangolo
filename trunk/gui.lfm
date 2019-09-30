@@ -276,7 +276,6 @@ object TriangoloMainForm: TTriangoloMainForm
     Width = 180
     Anchors = [akTop, akRight]
     Center = True
-    Enabled = False
     OnClick = LogoImageClick
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869636818000089504E47
