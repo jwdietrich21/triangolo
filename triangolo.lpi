@@ -20,7 +20,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="30"/>
+      <BuildNr Value="31"/>
       <Language Value="0809"/>
       <Attributes pvaDebug="True" pvaPreRelease="True"/>
       <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="© 2012-2018 . W. Dietrich and Ruhr University of Bochum" LegalTrademarks="Triangolo" OriginalFilename="Triangolo" ProductName="Triangolo" ProductVersion="1.0.0"/>
