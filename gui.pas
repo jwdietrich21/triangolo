@@ -94,6 +94,7 @@ type
     procedure InitialLT4DoseFloatSpinEditChange(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEditingDone(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
+    procedure LogoImageClick(Sender: TObject);
     procedure MacAboutItemClick(Sender: TObject);
     procedure MethodComboBoxChange(Sender: TObject);
     procedure QuitMenuItemClick(Sender: TObject);
@@ -227,6 +228,11 @@ end;
 procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
 begin
   Go(Sender);
+end;
+
+procedure TTriangoloMainForm.LogoImageClick(Sender: TObject);
+begin
+  AboutForm.ShowModal;
 end;
 
 procedure TTriangoloMainForm.MacAboutItemClick(Sender: TObject);

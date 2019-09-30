@@ -25,10 +25,13 @@
       <Attributes pvaDebug="True" pvaPreRelease="True"/>
       <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="© 2012-2018 . W. Dietrich and Ruhr University of Bochum" LegalTrademarks="Triangolo" OriginalFilename="Triangolo" ProductName="Triangolo" ProductVersion="1.0.0"/>
     </VersionInfo>
+    <MacroValues Count="1">
+      <Macro1 Name="LCLWidgetType" Value="cocoa"/>
+    </MacroValues>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
       <SharedMatrixOptions Count="1">
-        <Item1 ID="380827608065" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
+        <Item1 ID="380827608065" Modes="Default" Type="IDEMacro" MacroName="LCLWidgetType" Value="cocoa"/>
       </SharedMatrixOptions>
     </BuildModes>
     <PublishOptions>
