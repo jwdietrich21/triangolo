@@ -10,12 +10,12 @@ object AboutForm: TAboutForm
   Color = clWhite
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.0.2.0'
+  LCLVersion = '1.8.4.0'
   object VersionLabel: TLabel
     Left = 16
     Height = 13
     Top = 40
-    Width = 71
+    Width = 63
     Caption = 'Version x.x.x'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -26,7 +26,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 66
-    Width = 81
+    Width = 73
     Caption = '© 2012 – 2019'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -37,7 +37,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 80
-    Width = 69
+    Width = 67
     Caption = 'J. W. Dietrich'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -48,7 +48,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 104
-    Width = 103
+    Width = 99
     Caption = 'In Kooperation mit:'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -59,7 +59,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 132
-    Width = 135
+    Width = 129
     Caption = 'Ruhr-Universität Bochum'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -70,7 +70,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 146
-    Width = 191
+    Width = 184
     Caption = 'Universitätsklinikum Bergmannsheil'
     Font.Height = -11
     Font.Pitch = fpVariable
@@ -82,7 +82,7 @@ object AboutForm: TAboutForm
     Left = 16
     Height = 13
     Top = 172
-    Width = 82
+    Width = 80
     Caption = 'triangolo.sf.net'
     Font.Color = clGray
     Font.Height = -11
@@ -94,7 +94,7 @@ object AboutForm: TAboutForm
   object OKButton: TButton
     Left = 300
     Height = 25
-    Top = 157
+    Top = 172
     Width = 75
     Anchors = [akRight, akBottom]
     Caption = 'OK'
