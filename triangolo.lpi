@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
@@ -20,10 +20,10 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="32"/>
+      <BuildNr Value="33"/>
       <Language Value="0809"/>
       <Attributes pvaDebug="True" pvaPreRelease="True"/>
-      <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="© 2012-2018 . W. Dietrich and Ruhr University of Bochum" LegalTrademarks="Triangolo" OriginalFilename="Triangolo" ProductName="Triangolo" ProductVersion="1.0.0"/>
+      <StringTable CompanyName="J. W. Dietrich and Ruhr University of Bochum" InternalName="Agavi" LegalCopyright="© 2012-2020 J. W. Dietrich and Ruhr University of Bochum" LegalTrademarks="Triangolo" OriginalFilename="Triangolo" ProductName="Triangolo" ProductVersion="1.0.0"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
@@ -35,9 +35,10 @@
       <Version Value="2"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
     </RunParams>
     <RequiredPackages Count="2">
       <Item1>
