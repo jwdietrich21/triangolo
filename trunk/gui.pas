@@ -2,8 +2,8 @@
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2019 }
-{ (c) Ruhr University of Bochum 2012 - 2019 }
+{ (c) Johannes W. Dietrich, 2012 - 2020 }
+{ (c) Ruhr University of Bochum 2012 - 2020 }
 
 { GUI }
 

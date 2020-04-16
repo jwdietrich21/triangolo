@@ -2,8 +2,8 @@
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2019 }
-{ (c) Ruhr University of Bochum 2012 - 2019 }
+{ (c) Johannes W. Dietrich, 2012 - 2020 }
+{ (c) Ruhr University of Bochum 2012 - 2020 }
 
 { Main project file }
 
@@ -33,7 +33,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Title:='Triangolo';
+  Application.Title := 'Triangolo';
   RequireDerivedFormResource := True;
   Application.Scaled := True;
   Application.Initialize;
