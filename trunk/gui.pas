@@ -76,11 +76,11 @@ type
     NewMenuItem: TMenuItem;
     OpenMenuItem: TMenuItem;
     ParameterGroupBox: TGroupBox;
-    InitialLT4DoseFloatSpinEdit: TFloatSpinEdit;
     PasteMenuItem: TMenuItem;
     QuitMenuItem: TMenuItem;
     RedoMenuItem: TMenuItem;
     SaveMenuItem: TMenuItem;
+    InitialLT4DoseSpinEdit: TSpinEdit;
     StatusBar1: TStatusBar;
     UndoMenuItem: TMenuItem;
     WinAboutItem: TMenuItem;
@@ -99,6 +99,9 @@ type
     procedure InitialLT4DoseFloatSpinEditChange(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEditingDone(Sender: TObject);
     procedure InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
+    procedure InitialLT4DoseSpinEditChange(Sender: TObject);
+    procedure InitialLT4DoseSpinEditEditingDone(Sender: TObject);
+    procedure InitialLT4DoseSpinEditEnter(Sender: TObject);
     procedure LogoImageClick(Sender: TObject);
     procedure MacAboutItemClick(Sender: TObject);
     procedure MethodComboBoxChange(Sender: TObject);
@@ -136,7 +139,7 @@ begin
   WinAboutItem.Visible := False;
   AppleMenu.Visible := True;
   Color := clDefault;
-  InitialLT4DoseFloatSpinEdit.Color := clDefault;
+  InitialLT4DoseSpinEdit.Color := clDefault;
   FinalLT4DoseEdit.Color := clDefault;
   FinalLT3DoseEdit.Color := clDefault;
   {$ELSE}
@@ -182,7 +185,7 @@ begin
   otherwise
     selectedMethod := None;
   end;
-  Recommendation := FinalDose(InitialLT4DoseFloatSpinEdit.Value, selectedMethod);
+  Recommendation := FinalDose(InitialLT4DoseSpinEdit.Value, selectedMethod);
   FinalLT4DoseEdit.Text := FloatToStrF(Recommendation.LT4Dose, ffNumber, 1, 1);
   FinalLT3DoseEdit.Text := FloatToStrF(Recommendation.LT3Dose, ffNumber, 1, 1);
 end;
@@ -194,32 +197,32 @@ end;
 
 procedure TTriangoloMainForm.EditCopy1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.CopyToClipboard;
+  InitialLT4DoseSpinEdit.CopyToClipboard;
 end;
 
 procedure TTriangoloMainForm.EditCut1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.Clear;
+  InitialLT4DoseSpinEdit.Clear;
 end;
 
 procedure TTriangoloMainForm.EditDelete1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.Clear;
+  InitialLT4DoseSpinEdit.Clear;
 end;
 
 procedure TTriangoloMainForm.EditPaste1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.PasteFromClipboard;
+  InitialLT4DoseSpinEdit.PasteFromClipboard;
 end;
 
 procedure TTriangoloMainForm.EditSelectAll1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.SelectAll;
+  InitialLT4DoseSpinEdit.SelectAll;
 end;
 
 procedure TTriangoloMainForm.EditUndo1Execute(Sender: TObject);
 begin
-  InitialLT4DoseFloatSpinEdit.Undo;
+  InitialLT4DoseSpinEdit.Undo;
 end;
 
 procedure TTriangoloMainForm.FormCreate(Sender: TObject);
@@ -239,6 +242,21 @@ begin
 end;
 
 procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditEnter(Sender: TObject);
+begin
+  Go(Sender);
+end;
+
+procedure TTriangoloMainForm.InitialLT4DoseSpinEditChange(Sender: TObject);
+begin
+  Go(Sender);
+end;
+
+procedure TTriangoloMainForm.InitialLT4DoseSpinEditEditingDone(Sender: TObject);
+begin
+  Go(Sender);
+end;
+
+procedure TTriangoloMainForm.InitialLT4DoseSpinEditEnter(Sender: TObject);
 begin
   Go(Sender);
 end;
