@@ -5,7 +5,7 @@ object TriangoloMainForm: TTriangoloMainForm
   Width = 597
   ActiveControl = InitialLT4DoseFloatSpinEdit
   Caption = 'Triangolo'
-  ClientHeight = 410
+  ClientHeight = 390
   ClientWidth = 597
   Color = clWhite
   Constraints.MinHeight = 342
@@ -51,6 +51,7 @@ object TriangoloMainForm: TTriangoloMainForm
   }
   Menu = MainMenu1
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poScreenCenter
   LCLVersion = '2.0.8.0'
   object ParameterGroupBox: TGroupBox
@@ -60,8 +61,8 @@ object TriangoloMainForm: TTriangoloMainForm
     Width = 580
     Anchors = [akTop, akLeft, akRight]
     Caption = 'Parameter'
-    ClientHeight = 68
-    ClientWidth = 570
+    ClientHeight = 67
+    ClientWidth = 576
     ParentColor = False
     TabOrder = 0
     object InitialLT4DoseFloatSpinEdit: TFloatSpinEdit
@@ -86,29 +87,29 @@ object TriangoloMainForm: TTriangoloMainForm
     object InitialLT4DoseLabel: TLabel
       AnchorSideLeft.Control = InitialLT4DoseFloatSpinEdit
       Left = 24
-      Height = 16
+      Height = 15
       Top = 8
-      Width = 113
+      Width = 98
       Caption = 'Initiale L-T4-Dosis:'
       ParentColor = False
     end
     object IntialLT4UnitLabel: TLabel
       Left = 136
-      Height = 16
+      Height = 15
       Top = 32
-      Width = 42
+      Width = 39
       Caption = 'µg/Tag'
       ParentColor = False
     end
     object MethodComboBox: TComboBox
       Left = 320
-      Height = 20
+      Height = 23
       Hint = 'Berechnungsmethode nach ETA'
       Top = 27
-      Width = 227
+      Width = 233
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 119
-      ItemHeight = 19
+      ItemHeight = 15
       ItemIndex = 0
       Items.Strings = (
         'ETA-Methode A'
@@ -125,9 +126,9 @@ object TriangoloMainForm: TTriangoloMainForm
     object MethodLabel: TLabel
       AnchorSideLeft.Control = MethodComboBox
       Left = 320
-      Height = 16
+      Height = 15
       Top = 7
-      Width = 172
+      Width = 178
       Anchors = [akTop, akLeft, akRight]
       Caption = 'Berechnungsmethode:'
       ParentColor = False
@@ -144,8 +145,8 @@ object TriangoloMainForm: TTriangoloMainForm
     BorderSpacing.Left = 8
     BorderSpacing.Right = 5
     Caption = 'Endgültige Dosierungen:'
-    ClientHeight = 68
-    ClientWidth = 275
+    ClientHeight = 67
+    ClientWidth = 281
     ParentColor = False
     TabOrder = 1
     object FinalLT4DoseEdit: TEdit
@@ -162,17 +163,17 @@ object TriangoloMainForm: TTriangoloMainForm
     object FinalLT4DoseLabel: TLabel
       AnchorSideLeft.Control = FinalLT4DoseEdit
       Left = 24
-      Height = 16
+      Height = 15
       Top = 8
-      Width = 138
+      Width = 120
       Caption = 'Endgültige L-T4-Dosis:'
       ParentColor = False
     end
     object FinalLT4UnitLabel1: TLabel
       Left = 136
-      Height = 16
+      Height = 15
       Top = 32
-      Width = 42
+      Width = 39
       Caption = 'µg/Tag'
       ParentColor = False
     end
@@ -188,8 +189,8 @@ object TriangoloMainForm: TTriangoloMainForm
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     Caption = ' '
-    ClientHeight = 68
-    ClientWidth = 274
+    ClientHeight = 67
+    ClientWidth = 280
     ParentColor = False
     TabOrder = 2
     object FinalLT3DoseEdit: TEdit
@@ -205,17 +206,17 @@ object TriangoloMainForm: TTriangoloMainForm
     end
     object FinalLT3UnitLabel: TLabel
       Left = 136
-      Height = 16
+      Height = 15
       Top = 32
-      Width = 42
+      Width = 39
       Caption = 'µg/Tag'
       ParentColor = False
     end
     object FinalLT3DoseLabel: TLabel
       Left = 24
-      Height = 16
+      Height = 15
       Top = 8
-      Width = 139
+      Width = 120
       Caption = 'Endgültige L-T3-Dosis:'
       ParentColor = False
     end
@@ -237,19 +238,19 @@ object TriangoloMainForm: TTriangoloMainForm
   end
   object HintGroupBox: TGroupBox
     Left = 8
-    Height = 144
+    Height = 124
     Top = 248
     Width = 581
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Hinweise:'
-    ClientHeight = 125
-    ClientWidth = 571
+    ClientHeight = 104
+    ClientWidth = 577
     TabOrder = 3
     object RecommendationMemo: TMemo
       Left = 0
-      Height = 121
+      Height = 100
       Top = 2
-      Width = 573
+      Width = 579
       Anchors = [akTop, akLeft, akRight, akBottom]
       Lines.Strings = (
         'Recommendations by the European Thyroid Association:'
@@ -266,11 +267,11 @@ object TriangoloMainForm: TTriangoloMainForm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 18
-    Top = 392
+    Height = 23
+    Top = 367
     Width = 597
     Panels = <>
-    SimpleText = '   Triangolo 1.0 Alpha | For testing only'
+    SimpleText = '   Triangolo 1.0 Alpha | For testing and research use only'
   end
   object LogoImage: TImage
     Cursor = crHandPoint

@@ -29,6 +29,10 @@ uses
   ExtCtrls, ComCtrls, Menus, DividerBevel, LCLType, ActnList, StdActns, Buttons,
   Calculator, AboutWindow;
 
+const
+  ResearchWarning1 = 'This version of Triangolo is provided for research use only. Usage for medical decision making is currently not recommended and is in any case on your own risk.';
+  ResearchWarning2 = 'Diese Version von Triangolo ist nur für Forschungszwecke bestimmt. Die Verwendung für medizinische Entscheidungen wird derzeit nicht empfohlen und geschieht in jedem Falle auf Ihre Verantwortung.';
+
 type
 
   { TTriangoloMainForm }
@@ -82,6 +86,7 @@ type
     WinAboutItem: TMenuItem;
     procedure AdaptForPlatform;
     procedure CalculateButtonClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure Go(Sender: TObject);
     procedure CloseMenuItemClick(Sender: TObject);
     procedure EditCopy1Execute(Sender: TObject);
@@ -155,6 +160,14 @@ end;
 procedure TTriangoloMainForm.CalculateButtonClick(Sender: TObject);
 begin
   Go(Sender);
+end;
+
+procedure TTriangoloMainForm.FormShow(Sender: TObject);
+var
+  WarningString: String;
+begin
+  WarningString := ResearchWarning1 + LineEnding + LineEnding + ResearchWarning2;
+  ShowMessage(WarningString);
 end;
 
 procedure TTriangoloMainForm.Go(Sender: TObject);

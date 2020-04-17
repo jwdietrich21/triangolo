@@ -50,7 +50,7 @@ function SystemVersion: String;
 implementation
 
 {$IF (LCL_MAJOR >= 2) OR (LCL_MAJOR >= 1) AND (LCL_MINOR >=8)}
-  {$DEFINE NewLaz}
+  {$DEFINE NewLaz} // Lazarus 1.8 or newer
 {$ENDIF}
 {$IFDEF NewLaz}
   uses
