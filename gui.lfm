@@ -3,6 +3,7 @@ object TriangoloMainForm: TTriangoloMainForm
   Height = 410
   Top = 234
   Width = 597
+  ActiveControl = InitialLT4DoseSpinEdit
   Caption = 'Triangolo'
   ClientHeight = 410
   ClientWidth = 597
@@ -99,7 +100,7 @@ object TriangoloMainForm: TTriangoloMainForm
       OnChange = MethodComboBoxChange
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 0
+      TabOrder = 1
       Text = 'ETA-Methode A'
     end
     object MethodLabel: TLabel
@@ -126,7 +127,7 @@ object TriangoloMainForm: TTriangoloMainForm
       OnEnter = InitialLT4DoseSpinEditEnter
       ParentShowHint = False
       ShowHint = True
-      TabOrder = 1
+      TabOrder = 0
     end
   end
   object FinalLT4DoseGroupBox: TGroupBox
