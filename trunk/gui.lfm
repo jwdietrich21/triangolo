@@ -53,7 +53,7 @@ object TriangoloMainForm: TTriangoloMainForm
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.2.6.0'
   object ParameterGroupBox: TGroupBox
     Left = 8
     Height = 87
@@ -61,7 +61,7 @@ object TriangoloMainForm: TTriangoloMainForm
     Width = 580
     Anchors = [akTop, akLeft, akRight]
     Caption = 'Parameter'
-    ClientHeight = 68
+    ClientHeight = 60
     ClientWidth = 570
     ParentColor = False
     TabOrder = 0
@@ -141,18 +141,21 @@ object TriangoloMainForm: TTriangoloMainForm
     BorderSpacing.Left = 8
     BorderSpacing.Right = 5
     Caption = 'Endgültige Dosierungen:'
-    ClientHeight = 68
+    ClientHeight = 60
     ClientWidth = 275
     ParentColor = False
     TabOrder = 1
     object FinalLT4DoseEdit: TEdit
       Left = 24
       Height = 22
+      Hint = 'Endgültige L-T4-Dosis entsprechend dem gewählten Algorithmus'
       Top = 32
       Width = 80
       AutoSize = False
       Color = 16771544
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 0
       Text = '0'
     end
@@ -161,11 +164,11 @@ object TriangoloMainForm: TTriangoloMainForm
       Left = 24
       Height = 16
       Top = 8
-      Width = 138
+      Width = 139
       Caption = 'Endgültige L-T4-Dosis:'
       ParentColor = False
     end
-    object FinalLT4UnitLabel1: TLabel
+    object FinalLT4UnitLabel: TLabel
       Left = 136
       Height = 16
       Top = 32
@@ -185,18 +188,21 @@ object TriangoloMainForm: TTriangoloMainForm
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     Caption = ' '
-    ClientHeight = 68
+    ClientHeight = 60
     ClientWidth = 274
     ParentColor = False
     TabOrder = 2
     object FinalLT3DoseEdit: TEdit
       Left = 24
       Height = 22
+      Hint = 'Endgültige L-T3-Dosis entsprechend der gewählten ETA-Gleichung'
       Top = 32
       Width = 80
       AutoSize = False
       Color = clMoneyGreen
+      ParentShowHint = False
       ReadOnly = True
+      ShowHint = True
       TabOrder = 0
       Text = '0'
     end
@@ -239,12 +245,12 @@ object TriangoloMainForm: TTriangoloMainForm
     Width = 581
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Hinweise:'
-    ClientHeight = 125
+    ClientHeight = 117
     ClientWidth = 571
     TabOrder = 3
     object RecommendationMemo: TMemo
       Left = 0
-      Height = 121
+      Height = 113
       Top = 2
       Width = 573
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -273,11 +279,13 @@ object TriangoloMainForm: TTriangoloMainForm
     Cursor = crHandPoint
     Left = 383
     Height = 56
+    Hint = 'Über Triangolo...'
     Top = 8
     Width = 180
     Anchors = [akTop, akRight]
     Center = True
     OnClick = LogoImageClick
+    ParentShowHint = False
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869636818000089504E47
       0D0A1A0A0000000D49484452000000AC00000031080600000047C9424500000A
@@ -477,11 +485,12 @@ object TriangoloMainForm: TTriangoloMainForm
       75534F23186C40F454547B20FEE3FF03A61CF8D8CB06B8200000000049454E44
       AE426082
     }
+    ShowHint = True
     Transparent = True
   end
   object MainMenu1: TMainMenu
-    left = 496
-    top = 133
+    Left = 496
+    Top = 133
     object AppleMenu: TMenuItem
       Caption = ''
       object MacAboutItem: TMenuItem
@@ -556,8 +565,8 @@ object TriangoloMainForm: TTriangoloMainForm
     end
   end
   object ActionList1: TActionList
-    left = 424
-    top = 133
+    Left = 424
+    Top = 133
     object EditCut1: TEditCut
       Category = 'Edit'
       Caption = '&Ausschneiden'

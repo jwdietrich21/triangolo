@@ -1,9 +1,11 @@
+unit GUI;
+
 { Triangolo }
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2020 }
-{ (c) Ruhr University of Bochum 2012 - 2020 }
+{ (c) Johannes W. Dietrich, 2012 - 2022 }
+{ (c) Ruhr University of Bochum 2012 - 2022 }
 
 { GUI }
 
@@ -18,8 +20,6 @@
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
 { MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
 
-unit GUI;
-
 {$mode objfpc}{$H+}
 
 interface
@@ -27,11 +27,11 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Spin, StdCtrls,
   ExtCtrls, ComCtrls, Menus, DividerBevel, LCLType, ActnList, StdActns, Buttons,
-  Calculator, AboutWindow;
+  Calculator, GUIServices, AboutWindow;
 
 const
-  ResearchWarning1 = 'This version of Triangolo is provided for research use only. Usage for medical decision making is currently not recommended and is in any case on your own risk.';
-  ResearchWarning2 = 'Diese Version von Triangolo ist nur für Forschungszwecke bestimmt. Die Verwendung für medizinische Entscheidungen wird derzeit nicht empfohlen und geschieht in jedem Falle auf Ihre Verantwortung.';
+  ResearchWarning1 = 'This version of Triangolo is provided for development and research use only. Usage for medical decision making is currently not recommended and is in any case on your own risk.';
+  ResearchWarning2 = 'Diese Version von Triangolo ist nur für Entwicklungs- und Forschungszwecke bestimmt. Die Verwendung für medizinische Entscheidungen wird derzeit nicht empfohlen und geschieht in jedem Falle auf Ihre Verantwortung.';
 
 type
 
@@ -61,7 +61,7 @@ type
     FinalLT3DoseGroupBox: TGroupBox;
     FinalLT4DoseLabel: TLabel;
     FinalLT3DoseLabel: TLabel;
-    FinalLT4UnitLabel1: TLabel;
+    FinalLT4UnitLabel: TLabel;
     FinalLT3UnitLabel: TLabel;
     HelpMenu: TMenuItem;
     HintGroupBox: TGroupBox;
@@ -85,6 +85,7 @@ type
     UndoMenuItem: TMenuItem;
     WinAboutItem: TMenuItem;
     procedure AdaptForPlatform;
+    procedure AdaptLanguages;
     procedure CalculateButtonClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Go(Sender: TObject);
@@ -160,6 +161,42 @@ begin
   PasteMenuItem.ShortCut := ShortCut(VK_V, modifierKey);
 end;
 
+procedure TTriangoloMainForm.AdaptLanguages;
+var
+  theLanguage: tInterfaceLanguage;
+  s: integer;
+begin
+  s := 0;
+  theLanguage := GetOSLanguage;
+  if theLanguage = German then
+    s := 1;
+  ParameterGroupBox.Caption := kParameterGroup[s];
+  InitialLT4DoseLabel.Caption := kInitialLT4Dosage[s];
+  IntialLT4UnitLabel.Caption := kUnitLabel[s];
+  MethodLabel.Caption := kMethodCaption[s];
+  MethodComboBox.Items.Text := StringReplace(MethodComboBox.Items.Text, kMethod[1], kMethod[s], [rfReplaceAll, rfIgnoreCase]);
+  FinalLT4DoseGroupBox.Caption := kFinalDosage[s];
+  FinalLT4UnitLabel.Caption := kUnitLabel[s];
+  FinalLT3UnitLabel.Caption := kUnitLabel[s];
+  FinalLT4DoseLabel.Caption := kFinalLT4Dosage[s];
+  FinalLT3DoseLabel.Caption := kFinalLT3Dosage[s];
+  HintGroupBox.Caption := kHint[s];
+  FileMenu.Caption := kFileMenu[s];
+  NewMenuItem.Caption := kNewItem[s];
+  OpenMenuItem.Caption := kOpenItem[s];
+  SaveMenuItem.Caption := kSaveItem[s];
+  CloseMenuItem.Caption := kCloseItem[s];
+  EditMenu.Caption := kEditMenu[s];
+  UndoMenuItem.Caption := kUndoItem[s];
+  RedoMenuItem.Caption := kRedoItem[s];
+  CutMenuItem.Caption := kCutItem[s];
+  CopyMenuItem.Caption := kCopyItem[s];
+  PasteMenuItem.Caption := kPasteItem[s];
+  HelpMenu.Caption := kHelpMenu[s];
+  MacAboutItem.Caption := kAboutItem[s];
+  WinAboutItem.Caption := MacAboutItem.Caption;
+end;
+
 procedure TTriangoloMainForm.CalculateButtonClick(Sender: TObject);
 begin
   Go(Sender);
@@ -228,6 +265,7 @@ end;
 procedure TTriangoloMainForm.FormCreate(Sender: TObject);
 begin
   AdaptForPlatform;
+  AdaptLanguages;
 end;
 
 procedure TTriangoloMainForm.InitialLT4DoseFloatSpinEditChange(Sender: TObject);

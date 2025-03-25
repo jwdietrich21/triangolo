@@ -6,16 +6,22 @@ unit EnvironmentInfo;
 { Partly based on code provided by Mike Thompson, published at}
 { http://www.lazarus.freepascal.org/index.php/topic,13957.0.html}
 
-{ (c) J. W. Dietrich, 2007 - 2020 }
+{ (c) J. W. Dietrich, 2007 - 2022 }
 
 {$mode objfpc}{$H+}
+{$IFDEF LCLCocoa}
+{$modeswitch objectivec1}
+{$ENDIF}
 
 interface
 
 uses
   Classes, SysUtils, StrUtils, LCLVersion, DOS
-  {$IFDEF LCLCarbon}
+  {$IFDEF Darwin}
   , MacOSAll
+  {$ENDIF}
+  {$IFDEF LCLCocoa}
+  , CocoaAll
   {$ENDIF}
   {$IFDEF WINDOWS}
   , Windows, Win32Proc
@@ -40,6 +46,7 @@ function CurrentWidgetSet: String;
 function OSVersion: String;
 function YosemiteORNewer: boolean;
 function SierraOrNewer: boolean;
+function MojaveOrNewer: boolean;
 function XPORNewer: boolean;
 function VistaORNewer: boolean;
 function Win8OrNewer: boolean;
@@ -50,7 +57,7 @@ function SystemVersion: String;
 implementation
 
 {$IF (LCL_MAJOR >= 2) OR (LCL_MAJOR >= 1) AND (LCL_MINOR >=8)}
-  {$DEFINE NewLaz} // Lazarus 1.8 or newer
+  {$DEFINE NewLaz}
 {$ENDIF}
 {$IFDEF NewLaz}
   uses
@@ -177,6 +184,9 @@ begin
   else
     OSVersion := 'Mac OS X 10.';
   {$ELSE}
+  {$IFDEF LCLCocoa}
+  OSVersion := 'macOS ';
+  {$ELSE}
   {$IFDEF Linux}
   OSVersion := 'Linux Kernel ';
   {$ELSE}
@@ -218,44 +228,71 @@ begin
   {$ENDIF}
   {$ENDIF}
   {$ENDIF}
+  {$ENDIF}
+end;
+
+function IsMinMacOS(Maj, Min, Patch: integer): boolean;
+  { returns true, if this app runs on a macOS version as specified or newer }
+  {$IFDEF DARWIN}
+var
+  Major, Minor: SInt32;
+  theError: SInt16;
+  {$IFDEF LCLCocoa}
+  minOsVer: NSOperatingSystemVersion;
+  {$ENDIF}
+  {$ENDIF}
+begin
+  result := false;
+  {$IFDEF DARWIN}
+  {$IFDEF LCLCocoa}
+  minOsVer.majorVersion:= Maj;
+  minOsVer.minorVersion:= Maj;
+  minOsVer.patchVersion:= Patch;
+  {$ENDIF}
+  theError := Gestalt(gestaltSystemVersionMajor, Major);
+  if theError = 0 then
+    begin
+      theError := Gestalt(gestaltSystemVersionMinor, Minor);
+      if theError = 0 then
+        if (Major = Maj) and (Minor >= Min) or (Major > Maj) then
+          Result := True;
+    end
+  else
+  begin
+    {$IFDEF LCLCocoa}
+    if(NSProcessInfo.ProcessInfo.isOperatingSystemAtLeastVersion(minOSVer)) then
+      Result := True
+    else   {$ENDIF}
+      Result := False
+  end;
+  {$ENDIF}
 end;
 
 function YosemiteORNewer: boolean;
   { returns true, if this app runs on Mac OS X 10.10 Yosemite or newer }
-  {$IFDEF LCLcarbon}
-var
-  Major, Minor, Bugfix: SInt32;
-  theError: SInt16;
-  {$ENDIF}
 begin
-  Result := False;
-  {$IFDEF LCLcarbon}
-  theError := Gestalt(gestaltSystemVersionMinor, Major);
-  if theError = 0 then
-    theError := Gestalt(gestaltSystemVersionMinor, Minor);
-  if TheError = 0 then
-    if (Major = 10) and (Minor >= 10) or (Major > 10) then
-      Result := True;
+  result := false;
+  {$IFDEF DARWIN}
+  result := IsMinMacOS(10, 10, 0);
   {$ENDIF}
 end;
 
 function SierraOrNewer: boolean;
   { returns true, if this app runs on macOS X 10.12 Sierra or newer }
-{$IFDEF LCLcarbon}
-var
-  Major, Minor, Bugfix: SInt32;
-  theError: SInt16;
-{$ENDIF}
 begin
-  Result := False;
-{$IFDEF LCLcarbon}
-  theError := Gestalt(gestaltSystemVersionMinor, Major);
-  if theError = 0 then
-    theError := Gestalt(gestaltSystemVersionMinor, Minor);
-  if theError = 0 then
-    if (Major = 10) and (Minor >= 12) or (Major > 10) then
-      Result := True;
-{$ENDIF}
+  result := false;
+  {$IFDEF DARWIN}
+  result := IsMinMacOS(10, 12, 0);
+  {$ENDIF}
+end;
+
+function MojaveOrNewer: boolean;
+  { returns true, if this app runs on macOS X 10.14 Mojave or newer }
+begin
+  result := false;
+  {$IFDEF DARWIN}
+  result := IsMinMacOS(10, 14, 0);
+  {$ENDIF}
 end;
 
 function XPORNewer: boolean;
@@ -323,13 +360,16 @@ end;
 function SystemVersion: String;
 var
   SystemStem, MajVer, MinVer, BugfixVer: String;
-  {$IFDEF LCLcarbon}
+  {$IFDEF Darwin}
   Major, Minor, Bugfix: SInt32;
   theError: SInt16;
   {$ENDIF}
 begin
   SystemStem := OSVersion;
-  {$IFDEF LCLcarbon}
+  {$IFDEF LCLCarbon}
+  Major := 0;
+  Minor := 0;
+  Bugfix := 0;
   theError := Gestalt(gestaltSystemVersionMajor, Major);
   if theError = 0 then
     MajVer := IntToStr(Major)
@@ -351,6 +391,15 @@ begin
     SystemStem := 'macOS 10.';
   result := SystemStem + MinVer + '.' + BugfixVer;
   {$ELSE}
+  {$IFDEF LCLCocoa}
+  Major := NSProcessInfo.ProcessInfo.OperatingSystemVersion.majorVersion;
+  Minor := NSProcessInfo.ProcessInfo.OperatingSystemVersion.minorVersion;
+  Bugfix := NSProcessInfo.ProcessInfo.OperatingSystemVersion.patchVersion;
+  MajVer := IntToStr(Major);
+  MinVer := IntToStr(Minor);
+  BugfixVer := IntToStr(Bugfix);
+  result := SystemStem + MajVer + '.' + MinVer + '.' + BugfixVer;
+  {$ELSE}
   {$IFDEF WINDOWS}
   MajVer := IntToStr(Win32MajorVersion);
   MinVer := IntToStr(Win32MinorVersion);
@@ -359,6 +408,7 @@ begin
   MajVer := IntToStr(Lo(DosVersion) - 4);
   MinVer := IntToStr(Hi(DosVersion));
   result := SystemStem + MajVer + '.' + MinVer;
+  {$ENDIF}
   {$ENDIF}
   {$ENDIF}
 end;

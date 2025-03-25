@@ -1,9 +1,11 @@
+program triangolo;
+
 { Triangolo }
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2020 }
-{ (c) Ruhr University of Bochum 2012 - 2020 }
+{ (c) Johannes W. Dietrich, 2012 - 2022 }
+{ (c) Ruhr University of Bochum 2012 - 2022 }
 
 { Main project file }
 
@@ -18,8 +20,6 @@
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
 { MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
 
-program triangolo;
-
 {$mode objfpc}{$H+}
 
 uses
@@ -27,7 +27,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazcontrols, EnvironmentInfo, GUI, AboutWindow
+  Forms, lazcontrols, EnvironmentInfo, GUI, AboutWindow, GUIServices
   { you can add units after this };
 
 {$R *.res}

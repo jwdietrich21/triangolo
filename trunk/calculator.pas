@@ -1,9 +1,11 @@
+unit Calculator;
+
 { Triangolo }
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2020 }
-{ (c) Ruhr University of Bochum 2012 - 2020 }
+{ (c) Johannes W. Dietrich, 2012 - 2022 }
+{ (c) Ruhr University of Bochum 2012 - 2022 }
 
 { Calculating engine }
 
@@ -17,8 +19,6 @@
 { This program is distributed in the hope that it will be useful, }
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
 { MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
-
-unit Calculator;
 
 {$mode objfpc}{$H+}
 

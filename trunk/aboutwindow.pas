@@ -1,9 +1,11 @@
+unit AboutWindow;
+
 { Triangolo }
 
 { Version 1.0 (Agavi) }
 
-{ (c) Johannes W. Dietrich, 2012 - 2020 }
-{ (c) Ruhr University of Bochum 2012 - 2020 }
+{ (c) Johannes W. Dietrich, 2012 - 2022 }
+{ (c) Ruhr University of Bochum 2012 - 2022 }
 
 { Handler for About window }
 
@@ -18,21 +20,20 @@
 { but WITHOUT ANY WARRANTY; without even the implied warranty of }
 { MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. }
 
-unit AboutWindow;
-
 {$mode objfpc}{$H+}
 
 interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  LCLIntf, EnvironmentInfo;
+  LCLIntf, EnvironmentInfo, GUIServices;
 
 type
 
   { TAboutForm }
 
   TAboutForm = class(TForm)
+    CopyrightLabel8: TLabel;
     TriangoloLogo: TImage;
     OKButton: TButton;
     CopyrightLabel1: TLabel;
@@ -43,6 +44,7 @@ type
     TriangoloURL: TLabel;
     VersionLabel: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure AdaptLanguages;
     procedure OKButtonClick(Sender: TObject);
     procedure TriangoloURLClick(Sender: TObject);
   private
@@ -66,6 +68,20 @@ begin
   {$IFDEF LCLCocoa}
   Color := clDefault;
   {$ENDIF}
+  AdaptLanguages;
+end;
+
+procedure TAboutForm.AdaptLanguages;
+var
+  theLanguage: tInterfaceLanguage;
+  s: integer;
+begin
+  s := 0;
+  theLanguage := GetOSLanguage;
+  if theLanguage = German then
+    s := 1;
+  caption := kInfoCaption[s];
+  CopyrightLabel3.Caption := kCoopCaption[s];
 end;
 
 procedure TAboutForm.OKButtonClick(Sender: TObject);
